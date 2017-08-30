@@ -22,7 +22,7 @@ import static org.mockito.MockitoAnnotations.initMocks;
 public class CustomerServiceTest {
 
 	@InjectMocks
-	private CustomerServiceImpl accountService;
+	private CustomerServiceImpl customerService;
 
 	@Mock
 	private StatisticsServiceClient statisticsClient;
@@ -44,15 +44,15 @@ public class CustomerServiceTest {
 		final Customer account = new Customer();
 		account.setName("test");
 
-		when(accountService.findByName(account.getName())).thenReturn(account);
-		Customer found = accountService.findByName(account.getName());
+		when(customerService.findByName(account.getName())).thenReturn(account);
+		Customer found = customerService.findByName(account.getName());
 
 		assertEquals(account, found);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void shouldFailWhenNameIsEmpty() {
-		accountService.findByName("");
+		customerService.findByName("");
 	}
 
 	@Test
@@ -61,7 +61,7 @@ public class CustomerServiceTest {
 		User user = new User();
 		user.setUsername("test");
 
-		Customer account = accountService.create(user);
+		Customer account = customerService.create(user);
 
 		assertEquals(user.getUsername(), account.getName());
 		assertEquals(0, account.getSaving().getAmount().intValue());
@@ -108,8 +108,8 @@ public class CustomerServiceTest {
 
 		final Customer account = new Customer();
 
-		when(accountService.findByName("test")).thenReturn(account);
-		accountService.saveChanges("test", update);
+		when(customerService.findByName("test")).thenReturn(account);
+		customerService.saveChanges("test", update);
 
 		assertEquals(update.getNote(), account.getNote());
 		assertNotNull(account.getLastSeen());
@@ -145,7 +145,7 @@ public class CustomerServiceTest {
 		update.setIncomes(Arrays.asList(new Item()));
 		update.setExpenses(Arrays.asList(new Item()));
 
-		when(accountService.findByName("test")).thenReturn(null);
-		accountService.saveChanges("test", update);
+		when(customerService.findByName("test")).thenReturn(null);
+		customerService.saveChanges("test", update);
 	}
 }
