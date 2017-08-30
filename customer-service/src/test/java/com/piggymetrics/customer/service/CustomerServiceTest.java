@@ -19,7 +19,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.*;
 import static org.mockito.MockitoAnnotations.initMocks;
 
-public class AccountServiceTest {
+public class CustomerServiceTest {
 
 	@InjectMocks
 	private CustomerServiceImpl accountService;
