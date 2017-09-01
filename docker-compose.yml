@@ -157,6 +157,8 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: yiping999/pig-customer-service
     restart: always
+    ports:
+      - 6080:8080
     logging:
       options:
         max-size: "10m"
