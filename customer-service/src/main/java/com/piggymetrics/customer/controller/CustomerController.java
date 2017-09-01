@@ -8,6 +8,8 @@ import com.piggymetrics.customer.domain.Customer;
 import com.piggymetrics.customer.domain.User;
 import com.piggymetrics.customer.service.CustomerService;
 
+import io.swagger.annotations.ApiOperation;
+
 import javax.validation.Valid;
 import java.security.Principal;
 
@@ -16,7 +18,9 @@ public class CustomerController {
 
 	@Autowired
 	private CustomerService customerService;
-
+	
+	
+	@ApiOperation(value="获取客户", notes="")
 	@PreAuthorize("#oauth2.hasScope('server') or #name.equals('demo')")
 	@RequestMapping(path = "/{name}", method = RequestMethod.GET)
 	public Customer getCustomerByName(@PathVariable String name) {

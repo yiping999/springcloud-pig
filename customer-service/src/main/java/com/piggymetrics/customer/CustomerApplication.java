@@ -1,6 +1,5 @@
 package com.piggymetrics.customer;
 
-import feign.RequestInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,8 +21,13 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.provider.token.ResourceServerTokenServices;
 
+import com.didispace.swagger.EnableSwagger2Doc;
 import com.piggymetrics.customer.service.security.CustomUserInfoTokenServices;
 
+import feign.RequestInterceptor;
+
+
+@EnableSwagger2Doc
 @SpringBootApplication
 @EnableResourceServer
 @EnableDiscoveryClient
