@@ -10,4 +10,4 @@ ENV PATH=$PATH:$JAVA_HOME/bin
 
 CMD ["java", "-Xmx200m", "-jar", "/app/customer-service.jar"]
 
-EXPOSE 6000
+EXPOSE 6000 8080
