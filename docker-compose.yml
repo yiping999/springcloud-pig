@@ -75,8 +75,6 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: yiping999/pig-account-service
     restart: always
-    ports:
-      - 27017:27017
     logging:
       options:
         max-size: "10m"
@@ -88,6 +86,8 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: goodraincloudframeworks/piggymetrics-mongodb
     restart: always
+    ports:
+      - 27017:27017
     logging:
       options:
         max-size: "10m"
