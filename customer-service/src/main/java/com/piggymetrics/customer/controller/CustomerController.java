@@ -1,18 +1,25 @@
 package com.piggymetrics.customer.controller;
 
+import java.security.Principal;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.piggymetrics.customer.domain.Customer;
 import com.piggymetrics.customer.domain.User;
 import com.piggymetrics.customer.service.CustomerService;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-import javax.validation.Valid;
-import java.security.Principal;
-
+@Api(tags="用户管理")
 @RestController
 public class CustomerController {
 
@@ -20,7 +27,7 @@ public class CustomerController {
 	private CustomerService customerService;
 	
 	
-	@ApiOperation(value="获取客户", notes="")
+	  @ApiOperation("用户详情")
 	@PreAuthorize("#oauth2.hasScope('server') or #name.equals('demo')")
 	@RequestMapping(path = "/{name}", method = RequestMethod.GET)
 	public Customer getCustomerByName(@PathVariable String name) {

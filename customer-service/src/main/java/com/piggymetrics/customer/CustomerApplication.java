@@ -26,7 +26,6 @@ import com.piggymetrics.customer.service.security.CustomUserInfoTokenServices;
 
 import feign.RequestInterceptor;
 
-
 @EnableSwagger2Doc
 @SpringBootApplication
 @EnableResourceServer
