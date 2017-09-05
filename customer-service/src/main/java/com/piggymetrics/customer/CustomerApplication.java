@@ -21,12 +21,11 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.provider.token.ResourceServerTokenServices;
 
-import com.didispace.swagger.EnableSwagger2Doc;
 import com.piggymetrics.customer.service.security.CustomUserInfoTokenServices;
 
 import feign.RequestInterceptor;
 
-@EnableSwagger2Doc
+//@EnableSwagger2Doc
 @SpringBootApplication
 @EnableResourceServer
 @EnableDiscoveryClient

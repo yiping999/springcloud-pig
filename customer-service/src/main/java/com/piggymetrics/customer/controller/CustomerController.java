@@ -16,10 +16,7 @@ import com.piggymetrics.customer.domain.Customer;
 import com.piggymetrics.customer.domain.User;
 import com.piggymetrics.customer.service.CustomerService;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-
-@Api(tags="用户管理")
+//@Api(tags="用户管理")
 @RestController
 public class CustomerController {
 
@@ -27,7 +24,7 @@ public class CustomerController {
 	private CustomerService customerService;
 	
 	
-	  @ApiOperation("用户详情")
+//	  @ApiOperation("用户详情")
 	@PreAuthorize("#oauth2.hasScope('server') or #name.equals('demo')")
 	@RequestMapping(path = "/{name}", method = RequestMethod.GET)
 	public Customer getCustomerByName(@PathVariable String name) {
