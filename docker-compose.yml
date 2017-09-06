@@ -63,6 +63,8 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: goodraincloudframeworks/piggymetrics-mongodb
     restart: always
+    ports:
+      - 27011:27017    
     logging:
       options:
         max-size: "10m"
@@ -87,7 +89,7 @@ services:
     image: goodraincloudframeworks/piggymetrics-mongodb
     restart: always
     ports:
-      - 27017:27017
+      - 27012:27017
     logging:
       options:
         max-size: "10m"
@@ -110,6 +112,8 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: goodraincloudframeworks/piggymetrics-mongodb
     restart: always
+    ports:
+      - 27013:27017
     logging:
       options:
         max-size: "10m"
@@ -130,6 +134,8 @@ services:
   notification-mongodb:
     image: goodraincloudframeworks/piggymetrics-mongodb
     restart: always
+    ports:
+      - 27014:27017
     environment:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     logging:
@@ -160,7 +166,7 @@ services:
     image: yiping999/pig-customer-service
     restart: always
     ports:
-      - 6080:8080
+      - 27015:27017
     logging:
       options:
         max-size: "10m"
