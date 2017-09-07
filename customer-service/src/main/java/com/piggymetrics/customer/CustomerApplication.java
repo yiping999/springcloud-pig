@@ -69,8 +69,7 @@ public class CustomerApplication extends ResourceServerConfigurerAdapter {
 		http.authorizeRequests().anyRequest().permitAll()
 		         .and()
 		         .authorizeRequests()
-				 .antMatchers("/" , "/demo").authenticated();
-				//.permitAll()
+				 .antMatchers("/" ,"/*", "/demo").permitAll();
 				
 //				.authenticated();
 	}
