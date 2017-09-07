@@ -68,6 +68,7 @@ public class CustomerApplication extends ResourceServerConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 				.antMatchers("/" , "/demo").permitAll()
-				.anyRequest().authenticated();
+				.anyRequest().permitAll();
+//				.authenticated();
 	}
 }
