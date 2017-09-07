@@ -76,7 +76,7 @@ services:
       ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: yiping999/pig-account-service
-    restart: always
+    restart: no
     logging:
       options:
         max-size: "10m"
@@ -87,7 +87,7 @@ services:
       INIT_DUMP: account-service-dump.js
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: goodraincloudframeworks/piggymetrics-mongodb
-    restart: always
+    restart: no
     ports:
       - 27012:27017
     logging:
@@ -101,7 +101,7 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
       STATISTICS_SERVICE_PASSWORD: $STATISTICS_SERVICE_PASSWORD
     image: yiping999/pig-stat-service
-    restart: always
+    restart: no
     logging:
       options:
         max-size: "10m"
@@ -111,7 +111,7 @@ services:
     environment:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: goodraincloudframeworks/piggymetrics-mongodb
-    restart: always
+    restart: no
     ports:
       - 27013:27017
     logging:
@@ -125,7 +125,7 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
       NOTIFICATION_SERVICE_PASSWORD: $NOTIFICATION_SERVICE_PASSWORD
     image: yiping999/pig-notify-service
-    restart: always
+    restart: no
     logging:
       options:
         max-size: "10m"
@@ -133,7 +133,7 @@ services:
 
   notification-mongodb:
     image: goodraincloudframeworks/piggymetrics-mongodb
-    restart: always
+    restart: no
     ports:
       - 27014:27017
     environment:
@@ -164,7 +164,7 @@ services:
       ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: yiping999/pig-customer-service
-    restart: always
+    restart: no
     logging:
       options:
         max-size: "10m"
@@ -175,7 +175,7 @@ services:
       INIT_DUMP: account-service-dump.js
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: goodraincloudframeworks/piggymetrics-mongodb
-    restart: always
+    restart: no
     ports:
       - 27015:27017
     logging:
