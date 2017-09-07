@@ -4,6 +4,8 @@ import java.security.Principal;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +21,8 @@ import com.piggymetrics.customer.service.CustomerService;
 //@Api(tags="用户管理")
 @RestController
 public class CustomerController {
+	
+	private final Logger log = LoggerFactory.getLogger(getClass());
 
 	@Autowired
 	private CustomerService customerService;
@@ -28,6 +32,8 @@ public class CustomerController {
 	@PreAuthorize("#oauth2.hasScope('server') or #name.equals('demo')")
 	@RequestMapping(path = "/{name}", method = RequestMethod.GET)
 	public Customer getCustomerByName(@PathVariable String name) {
+		
+		log.info("get customer: " + name);
 		return customerService.findByName(name);
 	}
 
