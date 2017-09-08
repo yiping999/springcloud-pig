@@ -170,6 +170,19 @@ services:
         max-size: "10m"
         max-file: "10"
 
+
+  customer-service2:
+    environment:
+      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+      ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
+      MONGODB_PASSWORD: $MONGODB_PASSWORD
+    image: yiping999/pig-customer-service
+    restart: always
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
   customer-mongodb:
     environment:
       INIT_DUMP: account-service-dump.js
