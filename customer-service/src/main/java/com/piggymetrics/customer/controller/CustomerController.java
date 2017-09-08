@@ -29,7 +29,7 @@ public class CustomerController {
 	
 	
 //	  @ApiOperation("用户详情")
-	@PreAuthorize("#oauth2.hasScope('server') or #name.equals('demo')")
+	@PreAuthorize("#oauth2.hasScope('server') or #name.equals('demo') or #name.equals('yiping')")
 	@RequestMapping(path = "/{name}", method = RequestMethod.GET)
 	public Customer getCustomerByName(@PathVariable String name) {
 		
