@@ -74,7 +74,9 @@ public class CustomerApplication extends ResourceServerConfigurerAdapter {
 		log.info("get httpsecurity: " + http);
 		log.info("get request: " + http.authorizeRequests());
 		
-		http.authorizeRequests().anyRequest().permitAll();
+		http.authorizeRequests()
+		.antMatchers("/" , "/**").permitAll()
+		.anyRequest().authenticated();
 				
 //				.authenticated();
 	}
