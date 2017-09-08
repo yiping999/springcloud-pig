@@ -1,5 +1,7 @@
 package com.piggymetrics.customer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -35,6 +37,8 @@ import feign.RequestInterceptor;
 @EnableConfigurationProperties
 @Configuration
 public class CustomerApplication extends ResourceServerConfigurerAdapter {
+	
+	private final Logger log = LoggerFactory.getLogger(getClass());
 
 	@Autowired
 	private ResourceServerProperties sso;
@@ -66,6 +70,10 @@ public class CustomerApplication extends ResourceServerConfigurerAdapter {
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
+		
+		log.info("get httpsecurity: " + http);
+		log.info("get request: " + http.authorizeRequests());
+		
 		http.authorizeRequests().anyRequest().permitAll();
 				
 //				.authenticated();
