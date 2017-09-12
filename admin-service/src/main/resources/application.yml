@@ -13,7 +13,7 @@ eureka:  #<1>
     serviceUrl:
       defaultZone: http://registry:8761/eureka/
 
-#management.security.enabled: false  #<2>
+management.security.enabled: false  #<2>
 
 # end::configuration-eureka[]
 
