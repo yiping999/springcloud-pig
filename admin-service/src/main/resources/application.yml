@@ -1,5 +1,5 @@
 
-spring.boot.admin.url: http://localhost:8080
+#spring.boot.admin.url: http://localhost:8080
 spring:
   application:
     name: admin-service
