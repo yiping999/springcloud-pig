@@ -194,7 +194,7 @@ services:
       - registry
     # container_name: admin
     ports:
-     - "7000:8080"
+     - "1000:8080"
     logging:
       options:
         max-size: "10m"
