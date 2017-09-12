@@ -171,17 +171,7 @@ services:
         max-file: "10"
 
 
-  customer-service2:
-    environment:
-      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-      ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
-      MONGODB_PASSWORD: $MONGODB_PASSWORD
-    image: yiping999/pig-customer-service
-    restart: always
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  customer-service2:
 
   customer-mongodb:
     environment:
@@ -195,3 +185,24 @@ services:
       options:
         max-size: "10m"
         max-file: "10"
+  
+  admin-service:
+    environment:
+       EUREKA_SERVICE_URL=http://registry:8761
+       EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+       LOGGING_FILE=/tmp/admin.log  
+    image: yiping999/pig-admin-service
+    restart: always
+    depends_on:
+      - registry
+    container_name: admin
+    ports:
+     - "7000:8080"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"       
+        
+      
+        
+        
