@@ -192,7 +192,7 @@ services:
     restart: always
     depends_on:
       - registry
-    container_name: admin
+    # container_name: admin
     ports:
      - "7000:8080"
     logging:
