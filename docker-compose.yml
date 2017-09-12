@@ -75,7 +75,8 @@ services:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
       ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
       MONGODB_PASSWORD: $MONGODB_PASSWORD
-    image: yiping999/pig-account-service
+   # image: yiping999/pig-account-service
+    image: goodraincloudframeworks/piggymetrics-account-service
     restart: always
     logging:
       options:
