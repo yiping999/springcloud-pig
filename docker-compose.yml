@@ -187,10 +187,7 @@ services:
         max-file: "10"
   
   admin-service:
-    environment:
-       EUREKA_SERVICE_URL=http://registry:8761
-       EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
-       LOGGING_FILE=/tmp/admin.log  
+
     image: yiping999/pig-admin-service
     restart: always
     depends_on:
