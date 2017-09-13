@@ -35,8 +35,8 @@ services:
   gateway:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-    image: yiping999/pig-gateway  
-    #image: goodraincloudframeworks/piggymetrics-gateway
+    #image: yiping999/pig-gateway  
+    image: goodraincloudframeworks/piggymetrics-gateway
     restart: always
     ports:
       - 80:4000
