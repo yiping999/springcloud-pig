@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/yiping999/springcloud-pig/tree/master/config/src/main/resources/shared
+          uri: https://github.com/yiping999/springcloud-pig
           username: yiping999
           password: yiping897209
           
