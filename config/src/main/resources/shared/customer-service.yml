@@ -7,15 +7,6 @@ security:
       grant-type: client_credentials
       scope: server
 
-#spring:
- # data:
-  #  mongodb:
-   #   host: customer-mongodb
-    #  username: user
-     # password: ${MONGODB_PASSWORD}
-     # database: piggymetrics
-     # port: 27017
-
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -25,8 +16,10 @@ spring:
   jpa:
      show-sql:true
      hibernate:ddl-auto:update
- 
- 
+logging:
+  level:
+    org.springframework.data: DEBUG
+
 server:
   context-path: /customers
   port: 6001
