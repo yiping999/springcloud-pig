@@ -3,7 +3,7 @@ package com.piggymetrics.customer.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
 import com.piggymetrics.customer.CustomerApplication;
-import com.piggymetrics.customer.controller.CustomerController;
+//import com.piggymetrics.customer.controller.CustomerController;
 import com.piggymetrics.customer.domain.*;
 import com.piggymetrics.customer.service.CustomerService;
 import com.sun.security.auth.UserPrincipal;

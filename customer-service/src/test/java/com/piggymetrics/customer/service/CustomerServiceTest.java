@@ -8,8 +8,8 @@ import org.mockito.Mock;
 import com.piggymetrics.customer.client.AuthServiceClient;
 import com.piggymetrics.customer.client.StatisticsServiceClient;
 import com.piggymetrics.customer.domain.*;
-import com.piggymetrics.customer.repository.CustomerRepository;
-import com.piggymetrics.customer.service.CustomerServiceImpl;
+//import com.piggymetrics.customer.repository.CustomerRepository;
+//import com.piggymetrics.customer.service.CustomerServiceImpl;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
