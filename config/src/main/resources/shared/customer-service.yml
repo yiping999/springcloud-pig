@@ -19,6 +19,7 @@ spring:
 logging:
   level:
     org.springframework.data: DEBUG
+    com.piggymetrics.customer: DEBUG
     
 
 server:
