@@ -1,5 +1,12 @@
+#spring:
+#  data:
+ #   mongodb:
+  #    database: piggymetrics
+   #   port: 0
+      
 spring:
-  data:
-    mongodb:
-      database: piggymetrics
-      port: 0
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.15.88.220:3306/test
+    username: root
+    password: changeit      
