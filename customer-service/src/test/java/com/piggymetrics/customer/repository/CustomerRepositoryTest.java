@@ -3,7 +3,7 @@ package com.piggymetrics.customer.repository;
 
 import com.piggymetrics.customer.CustomerApplication;
 import com.piggymetrics.customer.domain.*;
-import com.piggymetrics.customer.repository.CustomerRepository;
+//import com.piggymetrics.customer.repository.CustomerRepository;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
