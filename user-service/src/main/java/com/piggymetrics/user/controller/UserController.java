@@ -11,6 +11,7 @@ import com.piggymetrics.user.domain.User;
 import com.piggymetrics.user.service.IUserService;
 
 @RestController
+@RequestMapping(value = "/users")
 public class UserController
 {
     @Autowired
