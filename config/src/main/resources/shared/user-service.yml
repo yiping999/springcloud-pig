@@ -1,7 +1,7 @@
 security:
   oauth2:
     client:
-      clientId: customer-service
+      clientId: user-service
       clientSecret: ${ACCOUNT_SERVICE_PASSWORD}
       accessTokenUri: http://auth-service:5000/uaa/oauth/token
       grant-type: client_credentials
@@ -23,7 +23,7 @@ logging:
     
 
 server:
-  context-path: /customers
-  port: 6001
+  context-path: /users
+  port: 6003
 
   
