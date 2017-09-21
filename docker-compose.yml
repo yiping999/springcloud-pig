@@ -187,19 +187,33 @@ services:
       options:
         max-size: "10m"
         max-file: "10"
-  
-  admin-service:
-    image: yiping999/pig-admin-service
+        
+        
+        
+    customer-service:
+    environment:
+      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+      ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
+
+    image: yiping999/pig-user-service
     restart: always
-    depends_on:
-      - registry
-    #container_name: admin
-    ports:
-     - "1000:8080"
     logging:
       options:
         max-size: "10m"
-        max-file: "10"       
+        max-file: "10"      
+  
+  #admin-service:
+   # image: yiping999/pig-admin-service
+   # restart: always
+   # depends_on:
+   #   - registry
+    #container_name: admin
+    #ports:
+     #- "1000:8080"
+    #logging:
+     # options:
+     #   max-size: "10m"
+     #   max-file: "10"       
         
       
         
