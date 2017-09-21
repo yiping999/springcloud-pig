@@ -189,8 +189,7 @@ services:
         max-file: "10"
         
         
-        
-    customer-service:
+  user-service:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
       ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
