@@ -17,37 +17,37 @@ import com.piggymetrics.customer.domain.Customer;
 import com.piggymetrics.customer.domain.User;
 import com.piggymetrics.customer.service.CustomerService;
 
-////@Api(tags="用户管理")
-//@RestController
-//public class CustomerController {
-//	
-//	private final Logger log = LoggerFactory.getLogger(getClass());
-//
-//	@Autowired
-//	private CustomerService customerService;
-//	
-//	
-////	  @ApiOperation("用户详情")
-//	//@PreAuthorize("#oauth2.hasScope('server') or #name.equals('demo') or #name.equals('yiping')")
-//	@RequestMapping(path = "/{name}", method = RequestMethod.GET)
-//	public Customer getCustomerByName(@PathVariable String name) {
-//		
-//		log.info("get customer: " + name);
-//		return customerService.findByName(name);
-//	}
-//
-//	@RequestMapping(path = "/current", method = RequestMethod.GET)
-//	public Customer getCurrentCustomer(Principal principal) {
-//		return customerService.findByName(principal.getName());
-//	}
-//
-//	@RequestMapping(path = "/current", method = RequestMethod.PUT)
-//	public void saveCurrentCustomer(Principal principal, @Valid @RequestBody Customer customer) {
-//		customerService.saveChanges(principal.getName(), customer);
-//	}
-//
-//	@RequestMapping(path = "/", method = RequestMethod.POST)
-//	public Customer createNewCustomer(@Valid @RequestBody User user) {
-//		return customerService.create(user);
-//	}
-//}
+//@Api(tags="用户管理")
+@RestController
+public class CustomerController {
+	
+	private final Logger log = LoggerFactory.getLogger(getClass());
+
+	@Autowired
+	private CustomerService customerService;
+	
+	
+//	  @ApiOperation("用户详情")
+	//@PreAuthorize("#oauth2.hasScope('server') or #name.equals('demo') or #name.equals('yiping')")
+	@RequestMapping(path = "/{name}", method = RequestMethod.GET)
+	public Customer getCustomerByName(@PathVariable String name) {
+		
+		log.info("get customer: " + name);
+		return customerService.findByName(name);
+	}
+
+	@RequestMapping(path = "/current", method = RequestMethod.GET)
+	public Customer getCurrentCustomer(Principal principal) {
+		return customerService.findByName(principal.getName());
+	}
+
+	@RequestMapping(path = "/current", method = RequestMethod.PUT)
+	public void saveCurrentCustomer(Principal principal, @Valid @RequestBody Customer customer) {
+		customerService.saveChanges(principal.getName(), customer);
+	}
+
+	@RequestMapping(path = "/", method = RequestMethod.POST)
+	public Customer createNewCustomer(@Valid @RequestBody User user) {
+		return customerService.create(user);
+	}
+}

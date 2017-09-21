@@ -8,14 +8,14 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.piggymetrics.customer.CustomerApplication;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@SpringApplicationConfiguration(classes = CustomerApplication.class)
-//@WebAppConfiguration
-//public class CustomerServiceApplicationTests {
-//
-//	@Test
-//	public void contextLoads() {
-//
-//	}
-//
-//}
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = CustomerApplication.class)
+@WebAppConfiguration
+public class CustomerServiceApplicationTests {
+
+	@Test
+	public void contextLoads() {
+
+	}
+
+}
