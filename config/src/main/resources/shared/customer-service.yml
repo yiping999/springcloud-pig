@@ -8,14 +8,13 @@ security:
       scope: server
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://106.15.88.220:3306/test
-    username: root
-    password: changeit
-  jpa:
-     show-sql:true
-     hibernate:ddl-auto:update
+  data:
+    mongodb:
+      host: account-mongodb
+      username: user
+      password: ${MONGODB_PASSWORD}
+      database: piggymetrics
+      port: 27017
 logging:
   level:
     org.springframework.data: DEBUG
