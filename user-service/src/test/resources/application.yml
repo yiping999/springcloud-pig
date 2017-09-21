@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.15.88.220:3306/test
+    username: root
+    password: changeit
+  jpa:
+     show-sql:true
+     hibernate:ddl-auto:update
+logging:
+  level:
+    org.springframework.data: DEBUG
+    com.piggymetrics.customer: DEBUG
