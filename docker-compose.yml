@@ -199,7 +199,9 @@ services:
     logging:
       options:
         max-size: "10m"
-        max-file: "10"      
+        max-file: "10"
+    ports:
+      - 8001:8080          
   
   #admin-service:
    # image: yiping999/pig-admin-service

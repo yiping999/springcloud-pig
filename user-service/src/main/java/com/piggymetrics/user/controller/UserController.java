@@ -10,12 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.piggymetrics.user.domain.User;
 import com.piggymetrics.user.service.IUserService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+
+@Api(description="这个controller是干嘛的")
 @RestController
 public class UserController
 {
     @Autowired
     private IUserService userService;
 
+    
+    @ApiOperation(value="这个方法是干嘛的", notes="详细注释")
     @RequestMapping(value = "/add/{id}/{name}/{address}")
     public User addUser(@PathVariable int id, @PathVariable String name,
         @PathVariable String address)
