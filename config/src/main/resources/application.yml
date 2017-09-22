@@ -4,8 +4,7 @@ spring:
       server:
         git:
           uri: https://github.com/yiping999/config-repo
-          username: yiping999
-          password: yiping897209
+
 #       
         #native:
          # search-locations: classpath:/shared
