@@ -6,11 +6,11 @@ spring:
           uri: https://github.com/yiping999/config-repo
           username: yiping999
           password: yiping897209
-          
+#       
         #native:
          # search-locations: classpath:/shared
-  profiles:
-     active: native
+  #profiles:
+   #  active: native
 
 server:
   port: 8888
