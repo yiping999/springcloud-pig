@@ -52,7 +52,7 @@ public class UserControllerTest {
 		
 		when(userService.findOne(user.getId())).thenReturn(user);
 
-		mockMvc.perform(get("/users/" + user.getId()))
+		mockMvc.perform(get("/" + user.getId()))
 				.andExpect(jsonPath("$.name").value("test"))
 				.andExpect(status().isOk());
 	}
