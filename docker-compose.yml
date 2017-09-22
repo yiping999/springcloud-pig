@@ -201,7 +201,7 @@ services:
         max-size: "10m"
         max-file: "10"
     ports:
-      - 8001:8080          
+      - 8001:6003          
   
   #admin-service:
    # image: yiping999/pig-admin-service
