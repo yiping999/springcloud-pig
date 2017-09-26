@@ -32,6 +32,8 @@ services:
         max-size: "10m"
         max-file: "10"
         
+        
+  #zipkin tracing server docker
   tracing:
    image: yiping999/pig-tracing
    restart: always
@@ -41,7 +43,8 @@ services:
       options:
         max-size: "10m"
         max-file: "10"
-        
+   ports:
+      - 11008:11008       
         
         
   gateway:
