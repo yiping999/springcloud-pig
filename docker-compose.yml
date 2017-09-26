@@ -31,7 +31,19 @@ services:
       options:
         max-size: "10m"
         max-file: "10"
-
+        
+  tracing:
+   image: yiping999/pig-tracing
+   restart: always
+   depends_on:
+      - config      
+   logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+        
+        
+        
   gateway:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
