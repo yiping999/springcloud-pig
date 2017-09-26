@@ -175,33 +175,33 @@ services:
     volumes:
       - /var/log/pig:/app/log
       
-  customer-service:
-    environment:
-      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-      ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
-      MONGODB_PASSWORD: $MONGODB_PASSWORD
-    image: yiping999/pig-customer-service
-    restart: always
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
-
-
-
-
-  customer-mongodb:
-    environment:
-      INIT_DUMP: account-service-dump.js
-      MONGODB_PASSWORD: $MONGODB_PASSWORD
-    image: goodraincloudframeworks/piggymetrics-mongodb
-    restart: always
-    ports:
-      - 27015:27017
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  customer-service:
+#    environment:
+#      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
+#      ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
+#      MONGODB_PASSWORD: $MONGODB_PASSWORD
+#    image: yiping999/pig-customer-service
+#    restart: always
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
+#
+#
+#
+#
+#  customer-mongodb:
+#    environment:
+#      INIT_DUMP: account-service-dump.js
+#      MONGODB_PASSWORD: $MONGODB_PASSWORD
+#    image: goodraincloudframeworks/piggymetrics-mongodb
+#    restart: always
+#    ports:
+#      - 27015:27017
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
         
         
 #  user-service:
