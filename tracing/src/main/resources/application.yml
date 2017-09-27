@@ -3,4 +3,17 @@ server:
 spring:
   application:
     name : tracing
+  sleuth:
+    enabled: false   
 
+zipkin:
+  storage:
+    StorageComponent : elasticsearch
+    type: elasticsearch
+    elasticsearch:
+      #cluster: elasticsearch-zipkin-cluste
+      hosts: 106.15.88.220:9200
+      max-requests: 64
+      index: zipkin
+      index-shards: 5
+      index-replicas: 1
