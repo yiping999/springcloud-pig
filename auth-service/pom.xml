@@ -55,15 +55,13 @@
 	
 	
 		
-        <dependency>
+		<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-sleuth-zipkin</artifactId>
-            <version>1.2.0.RELEASE</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-sleuth</artifactId>   
-            <version>1.2.0.RELEASE</version><!--$NO-MVN-MAN-VER$-->        
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
         </dependency>
 		
 		
