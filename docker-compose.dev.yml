@@ -11,7 +11,11 @@ services:
 
   registry:
     build: registry
-
+    
+  #zipkin tracing server docker
+  tracing:
+    build: tracing
+    
   gateway:
     build: gateway
 
