@@ -14,6 +14,8 @@ services:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
     image: yiping999/pig-config
+    depends_on:
+      - rabbitmq   
     restart: always
     logging:
       options:
@@ -24,6 +26,8 @@ services:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
     image: yiping999/pig-registry
+    depends_on:
+      - config   
     restart: always
     ports:
       - 8761:8761
@@ -52,6 +56,8 @@ services:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
     image: yiping999/pig-gateway  
     #image: goodraincloudframeworks/piggymetrics-gateway
+    depends_on:
+      - config 
     restart: always
     ports:
       - 80:4000
@@ -68,6 +74,8 @@ services:
       ACCOUNT_SERVICE_PASSWORD: $ACCOUNT_SERVICE_PASSWORD
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: yiping999/pig-auth-service
+    depends_on:
+      - config     
     restart: always
     logging:
       options:
@@ -93,6 +101,8 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
     image: yiping999/pig-account-service
     #image: goodraincloudframeworks/piggymetrics-account-service
+    depends_on:
+      - config  
     restart: always
     logging:
       options:
@@ -118,6 +128,8 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
       STATISTICS_SERVICE_PASSWORD: $STATISTICS_SERVICE_PASSWORD
     image: yiping999/pig-stat-service
+    depends_on:
+      - config  
     restart: always
     logging:
       options:
@@ -142,6 +154,8 @@ services:
       MONGODB_PASSWORD: $MONGODB_PASSWORD
       NOTIFICATION_SERVICE_PASSWORD: $NOTIFICATION_SERVICE_PASSWORD
     image: yiping999/pig-notify-service
+    depends_on:
+      - config  
     restart: always
     logging:
       options:
@@ -164,6 +178,8 @@ services:
     environment:
       CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
     image: yiping999/pig-monitoring
+    depends_on:
+      - config  
     restart: always
     ports:
       - 9000:8080
