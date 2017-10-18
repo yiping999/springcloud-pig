@@ -103,6 +103,8 @@ services:
     #image: goodraincloudframeworks/piggymetrics-account-service
     depends_on:
       - config  
+    ports:
+     - "2000:8080"      
     restart: always
     logging:
       options:
