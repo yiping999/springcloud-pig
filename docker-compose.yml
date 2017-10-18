@@ -102,9 +102,7 @@ services:
     image: yiping999/pig-account-service
         #image: goodraincloudframeworks/piggymetrics-account-service
     depends_on:
-      - config  
-    ports:
-     - "2000:8080"      
+      - config       
     restart: always
     logging:
       options:
